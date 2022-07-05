@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <section class="profile">
+    <p>logo du contact</p>
+      <h1>contact</h1>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div>
+          <label for="number">Contact 1</label>
+          <input type="text" name="numero1" placeholder="tel 1" ngModel>
+        </div>
+
+        <div>
+          <label for="number">Contact 2</label>
+          <input type="text" name="numero2" placeholder="tel 2" ngModel>
+        </div>
+
+        <div class="btns">
+          <button class="submit" type="submit">Submit</button>
+        </div>
+      </form>
+  </section>
+
+</ion-content>

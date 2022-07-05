@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>formations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="content">
+
+    <form  #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="items">
+        <div class="item">
+          <label for="formation">Formation</label>
+          <input type="text" name="formation1" id="formation" ngModel>
+        </div>
+        <div class="item">
+          <label for="etablissement">Structure</label>
+          <input type="text" name="structure1" id="etablissement" ngModel>
+        </div>
+        <div class="item">
+          <label for="ville">Ville</label>
+          <input type="text" name="ville1" id="ville" ngModel>
+        </div>
+        <div class="item">
+          <label for="date-debut">Date de debut</label>
+          <input type="date" name="dateDebut1" id="date-debut" ngModel>
+        </div>
+        <div class="item">
+          <label for="date-fin">Date de fin</label>
+          <input type="date" name="dateFin1" id="date-fin" ngModel>
+        </div>
+        <div class="item">
+          <label for="description">Description</label>
+          <textarea name="description1" id="description" cols="30" rows="10" ngModel></textarea>
+        </div>
+      </div>
+
+      <div class="items">
+        <div class="item">
+          <label for="formation">Formation</label>
+          <input type="text" name="formation2" id="formation" ngModel>
+        </div>
+        <div class="item">
+          <label for="etablissement">Structure</label>
+          <input type="text" name="structure2" id="etablissement" ngModel>
+        </div>
+        <div class="item">
+          <label for="ville">Ville</label>
+          <input type="text" name="ville2" id="ville" ngModel>
+        </div>
+        <div class="item">
+          <label for="date-debut">Date de debut</label>
+          <input type="date" name="dateDebut2" id="date-debut" ngModel>
+        </div>
+        <div class="item">
+          <label for="date-fin">Date de fin</label>
+          <input type="date" name="dateFin2" id="date-fin" ngModel>
+        </div>
+        <div class="item">
+          <label for="description">Description</label>
+          <textarea name="description2" id="description" cols="30" rows="10" ngModel></textarea>
+        </div>
+      </div>
+
+      <div class="btns">
+        <button class="submit" type="submit">Submit</button>
+      </div>
+    </form>
+
+
+
+  </div>
+
+</ion-content>

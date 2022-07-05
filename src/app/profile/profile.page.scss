@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.profile {
+  width: 100%;
+  padding: 16px;
+}
+h1{
+    text-align: center;
+}
+textarea, input{
+    border: none;
+    border-radius:5px ;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    padding: 12px;
+    width: 100%;
+    
+}
+textarea,button:focus, input{
+    outline: none;
+}
+button{
+    margin-top: 23px;
+    font-size: 14px;
+    padding: 12px;
+    background-color: var(--ion-color-primary);
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+}
+h1{
+    margin-bottom: 12px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.profile{
+  width: 100%;
+  padding: 16px;
+}
+.btn{
+    margin-top: 23px;
+    font-size: 14px;
+    padding: 12px;
+    background-color: var(--ion-color-primary);
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+}
+.add{
+   button{
+ 
+    color: white;
+    border-radius: 7px;
+    background-color: var(--ion-color-primary);
+  
+   }
+   text-align: end;
+}
+.lab{
+ display: flex;
+ margin-bottom: 23px;
+align-items: center;
+}
+label{
+    font-size: 14px;
+    font-weight: bold;
+    width: 90px;
+}
+input{
+    margin-left: 10px;
+}
+.divider{
+    border-bottom: 2px solid grey;
+    margin-bottom: 12px;
+}
+button {
+    background-color: var(--ion-color-primary);
+    padding: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.submit {
+   
+    margin-right: 10px;
+}
+.btns {
+    display: flex;
+}
+.add{
+    text-align: center;
+}

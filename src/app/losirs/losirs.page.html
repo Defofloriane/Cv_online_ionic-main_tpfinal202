@@ -1,0 +1,30 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Loisirs</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <section class="profile">
+    <p>logo du loisirs</p>
+      <h1>Loisirs</h1>
+
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="lab">
+          <label for="text">Loisir 1</label>
+          <input type="text" name="loisir1" placeholder="loisirs" ngModel>
+        </div>
+        <div class="lab">
+          <label for="text">Loisir 2</label>
+          <input type="text" name="loisir2" placeholder="loisirs" ngModel>
+        </div>
+        <div class="btns">
+          <button class="submit" type="submit">Submit</button>
+        </div>
+      </form>
+  </section>
+
+</ion-content>

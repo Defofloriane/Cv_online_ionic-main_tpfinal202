@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <section class="profile">
+      <p>logo du profil</p>
+        <h1>Profile</h1>
+        <textarea name="profile" id="profil" cols="30" rows="10" placeholder="veuillez saisir votre profil ici!" ngModel></textarea>
+
+      </section>
+      <section class="profile">
+        <p>logo du comptet</p>
+        <h1>Compte</h1>
+
+
+        <section>
+          <div class="lab" >
+            <label for="text">Compte 1</label>
+            <input type="text" name="compte1" class="compte" placeholder="Nom du compte" ngModel>
+          </div>
+          <div class="lab">
+
+            <label for="text">Lien 1</label>
+            <input type="text" name="lien1" class="lien" placeholder="lien 1" ngModel>
+          </div>
+        </section>
+
+        <section>
+          <div class="lab" >
+            <label for="text">Compte 2</label>
+            <input type="text" name="compte2" class="compte" placeholder="Nom du compte" ngModel>
+          </div>
+          <div class="lab">
+
+            <label for="text">Lien 2</label>
+            <input type="text" name="lien2" class="lien" placeholder="lien 2" ngModel>
+          </div>
+        </section>
+        <div class="btns">
+          <button class="submit" type="submit">Submit</button>
+        </div>
+      </section>
+
+  </form>
+
+</ion-content>

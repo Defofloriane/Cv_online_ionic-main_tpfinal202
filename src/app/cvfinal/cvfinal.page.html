@@ -1,0 +1,175 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cv Final</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="main">
+      
+      <div class="left-section">
+          <div class="left-content">
+
+            <div class="profile">
+                <div class="image">
+                    <!-- <img src= alt=""> -->
+                </div>
+                <h2 class="name">{{cv.noms}}</h2>
+                <h2 class="name">{{cv.prenoms}}</h2>
+                
+            </div>
+            <div class="contact-info">
+                <h4 class="main-title">Contact Info</h4>
+                <ul>
+                    <li *ngFor="let tel of cv.contacts" >
+                        <i class="fa fa-phone"></i>
+                              {{tel.contact}}
+                    </li>
+                    <li  *ngFor="let cont of cv.comptes">
+                        <i class="fa fa-fax"></i>
+                                {{cont.nom}}
+                                {{cont.lien}}
+                    </li>
+                           
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        {{cv.nationalite}}
+                    </li>
+                    <li>
+                      <i class="fa fa-map-marker"></i>
+                      {{cv.dateNaissance}}
+                  </li>
+                </ul>
+            </div>
+            <div class="skills-section">
+                <h3 class="main-title">Competences</h3>
+                <ul>
+                    <li *ngFor="let compt of cv.competences" >
+                        <p class="skill-title">{{compt.nom}}</p>
+                         <h5 *ngFor="let compt of cv.competences"> {{compt.categirie}}</h5>
+
+                        <div class="progress-bar">
+                            <div class="progress js-progress"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="references-section">
+                <h3 class="main-title">References</h3>
+                <div class="referee">
+                    <h6 class="sub-title">{{cv.adresse}}</h6>
+                    <p class="sub-para">{{cv.occupation}}</p>
+                    <ul>
+                        <li>
+                            <i class="fa fa-fax"></i>
+                            {{cv.email}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="left-content">
+          <div class="about sect">
+              <h2 class="right-title">Profile</h2>
+              <p class="para">
+                 {{cv.profile}}
+              </p>
+            </div>
+
+          <div class="experince sect">
+              <h2 class="right-title">Experience</h2>
+              <div class="timeline"  *ngFor="let expe of cv?.experiences">
+                  <div class="left-tl-content" >
+                      <h5 class="tl-title">{{expe.ville}}</h5>
+                      <p class="para">{{expe.dateDebut}} /{{expe.DateFin}}</p>
+                  </div>
+                  <div class="right-tl-content">
+                      <div class="tl-content">
+                          <h5 class="tl-title-2">{{expe.poste}}</h5>
+                          <p class="para">
+                              {{expe. description}}
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="education sect">
+              <h2 class="right-title">Formation</h2>
+              <div class="timeline"  *ngFor="let education of cv?.formation">
+                  <div class="left-tl-content">
+                      <h5 class="tl-title">{{education.structure}}</h5>
+                      <p class="para">{{education.dateDebut}} / {{education.dateFin}}</p>
+                  </div>
+                  <div class="right-tl-content">
+                      <div class="tl-content">
+                          <h5 class="tl-title-2">{{education.diplome}}</h5>
+                          <p class="para">
+                            {{education.description}}
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="skills-section">
+              <h3 class="right-title">Adresses E-Mails</h3>
+              <ul>
+                  <li >
+                      <p class="skill-title">{{cv.email}}</p>
+                  
+                  </li>
+              </ul>
+          </div>
+          <div class="skills-section">
+              <h2 class="right-title">Langues</h2>
+              <ul>
+                  <li *ngFor="let lang of cv.langues" >
+                      <p class="skill-title">{{lang.nom}}</p>
+                      <div class="progress-bar">
+                          <div class="progress js-progress"></div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="skills-section">
+              <h2 class="right-title">Loisirs</h2>
+
+              <ul>
+                  <li *ngFor="let loi of cv.loisirs">
+                      <p class="skill-title">{{loi.nom}}</p>
+                    
+                  </li>
+              </ul>
+          </div>
+       <div class="btnr">
+           <ion-button (click)="upload()"  
+                    color="tertiary" shape="round" 
+                    class="my-action-button">
+                    <ion-icon slot="start" name="star"></ion-icon>
+                    Save
+           </ion-button>
+            <ion-button (click)="myAction()"
+                    color="tertiary" shape="round" 
+                    class="my-action-button">
+                    <ion-icon slot="start" name="star"></ion-icon>
+                    Models CV 
+            </ion-button>
+            
+       </div>
+      </div>
+    
+    </div>
+   </div>
+ 
+
+    <ion-button (click)="getdata()" expand="full" fill="solid" shape="round">
+      get data
+      </ion-button>
+</ion-content>

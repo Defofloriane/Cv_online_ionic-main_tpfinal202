@@ -1,0 +1,31 @@
+<ion-app>
+
+
+<ion-content>
+    <div class="content">
+
+  
+  
+        <form>
+            <ion-list>
+                
+                <ion-item>
+                    <ion-label position="stacked">Email : </ion-label>
+                    <ion-input required type="email" [(ngModel)]="email" name="email"></ion-input>
+                </ion-item>
+              
+                <ion-item>
+                    <ion-label position="stacked">PassWord : </ion-label>
+                    <ion-input required type="password" [(ngModel)]="password" name="password"></ion-input>
+                </ion-item>
+
+                <ion-button type="submit" expand="block" shape="round" (click)="login()">Submit</ion-button>
+            </ion-list>
+        </form>
+  
+         <div style="text-align: center;">
+            <p>Don't have account? Register <a [routerLink]="['/register']">here!</a></p>
+            <p> <a [routerLink]="['/forgot-pass']">Forgot password</a></p>
+        </div>
+    </div>
+</ion-content>  

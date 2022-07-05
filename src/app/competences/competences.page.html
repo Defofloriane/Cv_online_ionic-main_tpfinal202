@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Competences</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="content">
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div>
+        <div class="item">
+          <label for="ct">Competences</label>
+          <input type="text" name="competence1" id="ct" ngModel>
+        </div>
+        <div class="item">
+          <label for="niveau">Niveau /5</label>
+          <input type="number" name="niveau1" id="niveau" ngModel>
+        </div>
+        <div class="item">
+          <label for="cat">Catégorie</label>
+          <input type="text" name="categorie1" id="cat" ngModel>
+        </div>
+      </div>
+      <div>
+        <div class="item">
+          <label for="ct">Competences</label>
+          <input type="text" name="competence2" id="ct" ngModel>
+        </div>
+        <div class="item">
+          <label for="niveau">Niveau /5</label>
+          <input type="number" name="niveau2" id="niveau" ngModel>
+        </div>
+        <div class="item">
+          <label for="cat">Catégorie</label>
+          <input type="text" name="categorie2" id="cat">
+        </div>
+      </div>
+      <div class="btns">
+        <button class="submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+</ion-content>
